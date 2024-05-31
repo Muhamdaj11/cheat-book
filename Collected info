@@ -1,0 +1,48 @@
+aws iam attach-role-policy \
+
+--role-name node-group-02-eks-node-group-20240528165440965800000001 \
+
+--policy-arn arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
+
+aws eks create-addon --cluster-name dominion-cluster --region us-west-2 --addon-name amazon-cloudwatch-observability
+
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin  590183905657.dkr.ecr.<region>.amazonaws.com
+
+http://590183905657.dkr.ecr.us-west-2.amazonaws.com/addressbook:1.1.0
+
+
+aws ecr get-login-password \
+        --region us-east-1 | docker login \
+        --username AWS \
+        --password-stdin <account-id>.dkr.ecr.us-east-1.amazonaws.com
+
+
+aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
+
+java -version
+
+javac -version
+
+sudo update-alternatives --list java
+
+whereis java
+
+ls -l /usr/bin/java
+
+ls -l /etc/alternatives/java
+
+sudo apt list --installed
+
+sudo apt list --installed | grep -i openjdk
+
+sudo apt remove openjdk-17-jdk-headless/noble,now 17.0.11+9-1 amd64
+sudo apt remove openjdk-17-jdk/noble,now 17.0.11+9-1 amd64
+sudo apt remove openjdk-17-jre-headless/noble,now 17.0.11+9-1 amd64
+sudo apt remove openjdk-17-jre/noble,now 17.0.11+9-1 amd64
+sudo apt remove openjdk-21-jdk-headless/noble,now 21.0.3+9-1ubuntu1 amd64
+sudo apt remove openjdk-21-jdk/noble,now 21.0.3+9-1ubuntu1 amd64
+sudo apt remove openjdk-21-jre-headless/noble,now 21.0.3+9-1ubuntu1 amd64
+sudo apt remove openjdk-21-jre/noble,now 21.0.3+9-1ubuntu1 amd64
+
+
+
